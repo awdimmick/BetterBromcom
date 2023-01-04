@@ -7,11 +7,6 @@ from BromcomConnector.settings import Settings
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "123456"
 
-# session['odata_creds'] = {
-#     'username':'12027',
-#     'password':'F497B0EA-E673-4839-B6F4-FF9EF1BE9F09'
-# }
-
 
 def authenticated():
     print(f"Authentication check: {'odata_creds' in session}")
@@ -24,7 +19,6 @@ def logout():
 
 
 def get_bromcom_connector():
-
     username = session['odata_creds']['username']
     password = session['odata_creds']['password']
     return BromcomConnector(username, password)
@@ -38,34 +32,6 @@ def index():  # put application's code here
 
     return render_template('start.html')
 
-
-"""
-@app.route('/student/<student_id>')
-def show_student_details(student_id):
-
-    try:
-        s = get_bromcom_connector().get_student_by_id(student_id)
-
-        return s.display_name
-
-    except IndexError:
-
-        return abort(404)
-
-
-@app.route('/student', methods=['GET'])
-def show_student_details_by_name():
-    args = request.args
-    try:
-        s = get_bromcom_connector().get_student_by_name_tutorgroup(args.get('firstName'), args.get('lastName'), args.get('tutorGroup'))
-
-        return s.display_name
-
-    except IndexError: # No results
-
-        return abort(404)
-
-"""
 
 @app.route('/class/<collection_id>')
 def show_collection_page(collection_id):
@@ -207,9 +173,11 @@ def process_logout():
     logout()
     return render_template("login.html")
 
+
 @app.errorhandler(401)
 def not_authenticated(e):
     return render_template("login.html"), 401
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -218,4 +186,4 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8888)
+    app.run(host="0.0.0.0", port=8800)
