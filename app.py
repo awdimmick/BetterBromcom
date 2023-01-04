@@ -3,9 +3,10 @@ import json
 from flask import Flask, session, render_template, redirect, url_for, abort, request, flash
 from BromcomConnector.bromcom_connect import BromcomConnector, BromcomAuthError
 from BromcomConnector.settings import Settings
+import secrets
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "123456"
+app.config['SECRET_KEY'] = secrets.token_urlsafe(32)
 
 
 def authenticated():

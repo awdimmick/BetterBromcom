@@ -28,8 +28,18 @@
     </div>
     <p>Before you are able to use BetterBromcom, you must connect to Bromcom witih your School ID number and your unique
         "User Access Key" access code.</p>
-    <p>You can find your User Access Key from the "My Account" section of Bromcom, under "General" .</p>
-    <p>Paste these details into the boxes below to connect.</p>
+    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#uac_instructions">Show me where to find my
+        User Access Key
+    </button>
+
+    <div id="uac_instructions" class="collapse" style="margin-top:1em; margin-bottom: 1em;">
+        <p>You can find your User Access Key from the <a
+                href="https://cloudmis.bromcom.com/Nucleus/UI/Areas/User/MyAccount.aspx" target="_blank">"My Account"
+            section within Bromcom</a>, under "General". </p>
+        <img src="/static/images/uak.png" alt="Screenshot showing User Access Key within Bromcom account settings">
+    </div>
+
+    <p style="margin-top: 1em;">Paste these details into the boxes below to connect.</p>
 
     <form action="/login" method="post">
         <div class="mb-3 mt-3">
