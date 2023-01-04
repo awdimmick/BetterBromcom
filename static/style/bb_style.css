@@ -1,0 +1,52 @@
+/* Behaviour Timeline styles */
+#behaviours_list > li {
+    list-style: none;
+}
+#behaviours_list {
+    padding-left:0px;
+}
+
+.behaviour_event {
+    border-left-style: solid;
+    border-left-width: 4px;
+    padding: 4px 4px 4px 6px;
+    margin-bottom: 8px;
+}
+.behaviour_event_positive {
+    border-left-color: green;
+    background-color: #f1faf2;
+}
+.behaviour_event_negative {
+    border-left-color: indianred;
+    background-color: #fff1f1;
+}
+.behaviour_event_student_name {
+    font-weight: bolder;
+    margin-bottom: 4px;
+    margin-top: 0px;
+    color: black;
+}
+.behaviour_event_meta_data {
+    font-size: 0.8em;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+.behaviour_event_staff_code {
+
+}
+.behaviour_event_description {
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.behaviour_list_date_heading {
+    margin-top: 1.2em;
+}
+.behaviour_event_no_comment_text{
+    font-style: italic;
+}
+
+
+.class_group_header{
+    margin-bottom: 1.6em;
+}
+
