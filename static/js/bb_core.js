@@ -101,6 +101,11 @@ function display_behaviour_timeline(behaviour_events) {
     for (let i = 0; i < behaviour_events.length; i++) {
         let b = behaviour_events[i];
 
+        // Skip any "neutral" behaviour logs
+        if (b.type != 'Positive' && b.type != 'Negative'){
+            continue;
+        }
+
         // Check if new date header is needed
         if (b.date.toDateString() != current_date.toDateString()) {
             current_date = new Date(b.date);

@@ -48,8 +48,6 @@ class Collection:
     @property
     def main_teacher(self):
 
-        # TODO: Update so that multiple teachers can be shown (only 1 for tutor group though)
-
         if self.__main_teacher :
             return self.__main_teacher
 

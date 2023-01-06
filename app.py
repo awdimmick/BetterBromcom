@@ -6,7 +6,7 @@ from BromcomConnector.settings import Settings
 import secrets
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "OJrX4K5ZkJc-06fv6LeAZe7jiJtjr_jAaX4-f_KEE2"
+app.config['SECRET_KEY'] = Settings.SECRET_KEY
 
 
 def authenticated():
