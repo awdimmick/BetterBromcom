@@ -1,0 +1,9 @@
+Speak to Bromcom about adding the following to OData feed:
+- User Defined Fields (especially IDACI,Tilt)
+- Medical data (or just that a significant medical issue exists)
+
+Add
+- "Intervention group" heading under Key Students area
+    - Show all students who are members of one of the academic intervention reporting groups
+    
+    
